@@ -17,8 +17,6 @@ import matplotlib.animation as animation
 
 # Length of interval.
 L = 1
-# Thermal conductivity.
-k = 1
 
 # Mesh size in x direction
 N = 100
@@ -61,7 +59,7 @@ for j in range(N-1):
 u.append(Q)
 
 # Convenient constant. :)
-s = k*dt/2.0/dx**2
+s = dt/2.0/dx**2
 
 # Create banded matrix
 A = np.zeros(3*(N-1)).reshape(3,N-1)
